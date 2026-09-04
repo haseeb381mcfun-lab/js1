@@ -1,0 +1,121 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #f5f6f7;
+    font-family: Arial, sans-serif;
+}
+
+.calculator {
+    width: 450px;
+    padding: 25px;
+    background: #29343e;
+    border-radius: 28px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.25);
+}
+
+.display {
+    height: 145px;
+    padding: 18px 22px;
+    margin-bottom: 28px;
+    background: #e9eee8;
+    border: 4px solid #1b242b;
+    border-radius: 18px;
+    box-shadow: inset 0 2px 7px rgba(0, 0, 0, 0.2);
+    color: #17212b;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.calculation {
+    font-size: 24px;
+    color: #68727a;
+}
+
+.answer {
+    text-align: right;
+    font-size: 52px;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+}
+
+button {
+    height: 65px;
+    border: none;
+    border-radius: 12px;
+    background: #3c4853;
+    color: #f8f8f8;
+    font-size: 26px;
+    cursor: pointer;
+    box-shadow: 0 5px 0 #1d252b, 0 6px 10px rgba(0, 0, 0, 0.25);
+}
+
+button:hover {
+    filter: brightness(1.08);
+}
+
+button:active {
+    transform: translateY(3px);
+    box-shadow: 0 2px 0 #1d252b;
+}
+
+.red {
+    background: #df3038;
+    box-shadow: 0 5px 0 #921d23, 0 6px 10px rgba(0, 0, 0, 0.25);
+}
+
+.second {
+    background: #e65345;
+    box-shadow: 0 5px 0 #9d3027, 0 6px 10px rgba(0, 0, 0, 0.25);
+}
+
+.gray-light {
+    background: #89939c;
+    box-shadow: 0 5px 0 #59636b, 0 6px 10px rgba(0, 0, 0, 0.25);
+}
+
+.orange {
+    background: #ff8112;
+    box-shadow: 0 5px 0 #a84d00, 0 6px 10px rgba(0, 0, 0, 0.25);
+}
+
+.equal {
+    background: #79c54a;
+    box-shadow: 0 5px 0 #447c25, 0 6px 10px rgba(0, 0, 0, 0.25);
+}
+
+.zero {
+    grid-column: span 2;
+}
+
+@media (max-width: 500px) {
+    .calculator {
+        width: 92%;
+        padding: 18px;
+    }
+
+    .display {
+        height: 125px;
+    }
+
+    button {
+        height: 58px;
+        font-size: 23px;
+    }
+
+    .answer {
+        font-size: 45px;
+    }
+}
